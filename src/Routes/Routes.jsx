@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
                   element:<AllArticle></AllArticle>
             },
             {
-                  path:'articledetils',
+                  path:'articledetils/:id',
                   element:<ArticleDetails></ArticleDetails>
             },
             {

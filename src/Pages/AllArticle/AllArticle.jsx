@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useParams } from 'react-router-dom';
 import PublisherCard from './PublisherCard';
 import useArticle from '../../hooks/useArticle';
+import { Helmet } from 'react-helmet-async';
 const AllArticle = () => {
       const [searchInput, setSearchInput] = useState("")
       // console.log(searchInput);
@@ -50,7 +51,9 @@ const AllArticle = () => {
       return (
             <div className='max-w-6xl mx-auto mt-20'>
                   <div>
-
+                        <Helmet>
+                              <title>DailyPulse || All Article</title>
+                        </Helmet>
                   </div>
                   <div className='max-w-[400px] mx-auto '>
                         <fieldset className="w-full space-y-1 dark:text-gray-100">
@@ -85,7 +88,7 @@ const AllArticle = () => {
 
                         {
 
-                             article.filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase()).map(data => <ALLArticleCard key={data.id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
+                             article.filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase()).map(data => <ALLArticleCard key={data._id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
                         }
                   </div>
             </div>
