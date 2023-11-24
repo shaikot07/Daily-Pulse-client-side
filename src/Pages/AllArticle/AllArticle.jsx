@@ -3,36 +3,38 @@ import ALLArticleCard from './ALLArticleCard';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useParams } from 'react-router-dom';
 import PublisherCard from './PublisherCard';
+import useArticle from '../../hooks/useArticle';
 const AllArticle = () => {
       const [searchInput, setSearchInput] = useState("")
-      console.log(searchInput);
-      const [data, setData] = useState([])
+      // console.log(searchInput);
+      // const [data, setData] = useState([])
+      const [article]=useArticle()
       const [filteredData, setFilteredData] = useState([]);
       const [selectedMenuItem, setSelectedMenuItem] = useState(null);
       const [userHasSubscription, setUserHasSubscription] = useState(false);
-      console.log(data);
+      // console.log(data);
 
       // console.log(filteredData);
-      useEffect(() => {
-            fetch('../../../public/data.json')
-                  .then(res => res.json())
-                  .then(data => setData(data))
-      }, [])
+      // useEffect(() => {
+      //       fetch('../../../public/data.json')
+      //             .then(res => res.json())
+      //             .then(data => setData(data))
+      // }, [])
 
       const handleScience = () => {
-            const scienceData = data.filter(item => item.publisher.toUpperCase() === 'SCIENCE DAILY');
+            const scienceData = article.filter(item => item.publisher.toUpperCase() === 'SCIENCE DAILY');
             setFilteredData(scienceData);
             setSelectedMenuItem('Science Daily');
       };
 
       const nationalGeographic = () => {
-            const nationalGeographicData = data.filter(item => item.publisher.toUpperCase() === 'NATIONAL GEOGRAPHIC');
+            const nationalGeographicData = article.filter(item => item.publisher.toUpperCase() === 'NATIONAL GEOGRAPHIC');
             setFilteredData(nationalGeographicData);
             setSelectedMenuItem('National Geographic');
       };
 
       const techInnovations = () => {
-            const techInnovationsData = data.filter(item => item.publisher.toUpperCase() === 'TECH INNOVATIONS');
+            const techInnovationsData = article.filter(item => item.publisher.toUpperCase() === 'TECH INNOVATIONS');
             setFilteredData(techInnovationsData);
             setSelectedMenuItem('Tech Innovations');
       };
@@ -83,7 +85,7 @@ const AllArticle = () => {
 
                         {
 
-                              data.filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase()).map(data => <ALLArticleCard key={data.id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
+                             article.filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase()).map(data => <ALLArticleCard key={data.id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
                         }
                   </div>
             </div>

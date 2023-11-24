@@ -1,6 +1,6 @@
 [
       {
-        "id": 1,
+        
         "title": "Breaking",
         "image": "https://i.ibb.co/cxkKJ5B/01.jpg",
         "publisher": "Science Daily",
@@ -15,7 +15,7 @@
         "status": "Published"
       },
       {
-        "id": 2,
+        
         "title": "Global Economy Update",
         "image": "https://i.ibb.co/v4C5hXN/02.jpg",
         "publisher": "National Geographic",
@@ -30,7 +30,7 @@
         "status": "Pending"
       },
       {
-        "id": 3,
+        
         "title": "Breaking",
         "image": "https://i.ibb.co/WkVNQ8Y/03.jpg",
         "publisher": "Science Daily",
@@ -45,7 +45,7 @@
         "status": "Published"
       },
       {
-        "id": 4,
+        
         "title": "Global Economy Update",
         "image": "https://i.ibb.co/dQPTrjG/04.jpg",
         "publisher": "National Geographic",
@@ -60,7 +60,7 @@
         "status": "Pending"
       },
       {
-        "id": 5,
+        
         "title": "Artificial Intelligence",
         "image": "https://i.ibb.co/v4C5hXN/02.jpg",
         "publisher": "Tech Innovations",
@@ -75,7 +75,7 @@
         "status": "Published"
       },
       {
-        "id": 6,
+        
         "title": "Global Economy Update",
         "image": "https://i.ibb.co/HGK33Q5/slaider-02.webp",
         "publisher": "Science Daily",
@@ -90,7 +90,7 @@
         "status": "Published"
       },
       {
-        "id": 7,
+        
         "title": "Artificial Intelligence",
         "image": "https://i.ibb.co/dQPTrjG/04.jpg",
         "publisher": "Tech Innovations",
@@ -105,7 +105,7 @@
         "status": "Published"
       },
       {
-        "id": 8,
+        
         "title": "Climate Change: ",
         "image": "https://i.ibb.co/WkVNQ8Y/03.jpg",
         "publisher": "Business Trends",
@@ -120,7 +120,7 @@
         "status": "Pending"
       },
       {
-        "id": 9,
+       
         "title": "Artificial Intelligence",
         "image": "https://i.ibb.co/v4C5hXN/02.jpg",
         "publisher": "Business Trends",
@@ -135,7 +135,7 @@
         "status": "Published"
       },
       {
-        "id": 10,
+       
         "title": "Climate Change: ",
         "image": "https://i.ibb.co/cxkKJ5B/01.jpg",
         "publisher": "Business Trends",
