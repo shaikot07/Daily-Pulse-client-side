@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignIn/SignUp";
 import AllArticle from "../Pages/AllArticle/AllArticle";
 import ArticleDetails from "../Pages/AllArticle/ArticleDEtiles/ArticleDetails";
+import Subscription from "../Pages/Subscription/Subscription";
 
 
 
@@ -18,10 +19,7 @@ export const router = createBrowserRouter([
                   path:'/',
                   element:<Home></Home>
             },
-            {
-                  path:'',
-                  element:<Home></Home>
-            },
+            
             {
                   path:'allarticles',
                   element:<AllArticle></AllArticle>
@@ -29,6 +27,14 @@ export const router = createBrowserRouter([
             {
                   path:'articledetils/:id',
                   element:<ArticleDetails></ArticleDetails>
+            },
+            {
+                  path:'subscription',
+                  element:<Subscription></Subscription>
+            },
+            {
+                  path:'login',
+                  element:<Login></Login>
             },
             {
                  path:'signup',

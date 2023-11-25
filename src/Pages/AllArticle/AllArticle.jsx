@@ -1,26 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import ALLArticleCard from './ALLArticleCard';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { useParams } from 'react-router-dom';
 import PublisherCard from './PublisherCard';
 import useArticle from '../../hooks/useArticle';
 import { Helmet } from 'react-helmet-async';
+import InfiniteScroll from 'react-infinite-scroll-component';
 const AllArticle = () => {
       const [searchInput, setSearchInput] = useState("")
       // console.log(searchInput);
-      // const [data, setData] = useState([])
-      const [article]=useArticle()
+      const [article] = useArticle()
       const [filteredData, setFilteredData] = useState([]);
       const [selectedMenuItem, setSelectedMenuItem] = useState(null);
       const [userHasSubscription, setUserHasSubscription] = useState(false);
-      // console.log(data);
+      const [page, setPage] = useState(1);
+      const [showLoader, setShowLoader] = useState(false);
+      const itemParPage = 4;
 
-      // console.log(filteredData);
-      // useEffect(() => {
-      //       fetch('../../../public/data.json')
-      //             .then(res => res.json())
-      //             .then(data => setData(data))
-      // }, [])
+      // infiniti loop ar kaj 
+      const fetchMoreData = () => {
+            const newData = article.slice(0, page * itemParPage); // Adjust based on your needs
+            setFilteredData(newData);
+            setPage(page + 1);
+      };
+
+      useEffect(() => {
+            fetchMoreData();
+            setShowLoader(true)
+      }, []);
+
 
       const handleScience = () => {
             const scienceData = article.filter(item => item.publisher.toUpperCase() === 'SCIENCE DAILY');
@@ -78,19 +84,30 @@ const AllArticle = () => {
                   <div>
                         <h2 className='text-center text-4xl text-[#E31C25] font-semibold mt-12' >All Article</h2>
                   </div>
-                  <div className='grid grid-cols-3 mt-8'>
-                        {
-                              filteredData.map((data, index) => <PublisherCard key={index} data={data} userHasSubscription={userHasSubscription}></PublisherCard>)
-                        }
-                  </div>
 
-                  <div className='grid grid-col-1 max-w-[32rem] mx-auto gap-12 mt-20'>
+                  {/* infiniti code start  */}
 
-                        {
+                  <InfiniteScroll
+                        dataLength={filteredData.length}
+                        next={fetchMoreData}
+                        hasMore={true} // Set this to false when there is no more data to load
+                        loader={<h4>Loading...</h4>}
+                  >
+                        <div className='grid gird-col-1 md:grid-cols-3 mt-8 gap-12'>
+                              {filteredData.map((data, index) => (
+                                    <PublisherCard key={index} data={data} userHasSubscription={userHasSubscription} />
+                              ))}
+                              {article
+                                    .filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase())
+                                    .map(data => <ALLArticleCard key={data._id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
+                              }
+                        </div>
+                  </InfiniteScroll>
 
-                             article.filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase()).map(data => <ALLArticleCard key={data._id} data={data} userHasSubscription={userHasSubscription}></ALLArticleCard>)
-                        }
-                  </div>
+
+                  {/* infiniti code end   */}
+
+
             </div>
       );
 };

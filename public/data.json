@@ -12,7 +12,8 @@
         "articleAuthorEmail": "john.scientist@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/DV2Jf0K/download.jpg",
         "postedDate": "2023-01-15",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 100
       },
       {
         
@@ -27,7 +28,8 @@
         "articleAuthorEmail": "jane.analyst@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-01-20",
-        "status": "Pending"
+        "status": "Pending",
+        " viewCount": 200
       },
       {
         
@@ -42,7 +44,8 @@
         "articleAuthorEmail": "alice.health@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/FgNS2GL/photo-1494790108377-be9c29b29330.jpg",
         "postedDate": "2023-02-05",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 300
       },
       {
         
@@ -57,7 +60,8 @@
         "articleAuthorEmail": "michael.space@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-02-10",
-        "status": "Pending"
+        "status": "Pending",
+        " viewCount": 100
       },
       {
         
@@ -72,7 +76,8 @@
         "articleAuthorEmail": "david.tech@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/DV2Jf0K/download.jpg",
         "postedDate": "2023-02-18",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 50
       },
       {
         
@@ -87,7 +92,8 @@
         "articleAuthorEmail": "emma.environment@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-02-25",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 700
       },
       {
         
@@ -102,7 +108,8 @@
         "articleAuthorEmail": "alex.ai@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/FgNS2GL/photo-1494790108377-be9c29b29330.jpg",
         "postedDate": "2023-03-05",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 30
       },
       {
         
@@ -117,7 +124,8 @@
         "articleAuthorEmail": "sophie.travel@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-03-10",
-        "status": "Pending"
+        "status": "Pending",
+        " viewCount": 200
       },
       {
        
@@ -132,7 +140,8 @@
         "articleAuthorEmail": "ryan.business@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-03-15",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 400
       },
       {
        
@@ -147,7 +156,8 @@
         "articleAuthorEmail": "maria.food@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/23pwKcL/download-1.jpg",
         "postedDate": "2023-03-20",
-        "status": "Published"
+        "status": "Published",
+        " viewCount": 10
       }
     ]
     
