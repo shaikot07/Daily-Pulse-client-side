@@ -7,6 +7,7 @@ import AllArticle from "../Pages/AllArticle/AllArticle";
 import ArticleDetails from "../Pages/AllArticle/ArticleDEtiles/ArticleDetails";
 import Subscription from "../Pages/Subscription/Subscription";
 import Payment from "../Component/Payment";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
             
             {
                   path:'allarticles',
-                  element:<AllArticle></AllArticle>
+                  element:<PrivateRoute><AllArticle></AllArticle></PrivateRoute>
             },
             {
                   path:'articledetils/:id',

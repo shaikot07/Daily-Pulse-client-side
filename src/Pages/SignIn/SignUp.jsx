@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Component/SocialLogin/SocialLogin';
 import Lottie from 'lottie-react';
 import loginAnimetion from '../../assets/login-animetion.json'
@@ -14,7 +14,7 @@ const SignUp = () => {
       const axiosPublic = useAxiosPublic()
       const { register, handleSubmit, reset, formState: { errors }, } = useForm();
       const { createUser, updatedUserProfile } = useAuth();
-      // const navigate = useNavigate();
+      const navigate = useNavigate();
       const onSubmit = (data) => {
             createUser(data.email, data.password)
                   .then(result => {
@@ -42,7 +42,7 @@ const SignUp = () => {
                                                             showConfirmButton: false,
                                                             timer: 1500
                                                       });
-                                                      // navigate('/');
+                                                      navigate('/');
                                                 }
                                           })
 

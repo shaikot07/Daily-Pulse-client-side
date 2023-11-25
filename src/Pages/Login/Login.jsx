@@ -1,4 +1,4 @@
-import React from 'react';
+
 import useAuth from '../../hooks/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -6,11 +6,14 @@ import { Helmet } from 'react-helmet-async';
 import SocialLogin from '../../Component/SocialLogin/SocialLogin';
 import Lottie from 'lottie-react';
 import loginAnimetion from '../../assets/login-animetion.json'
+import { useState } from 'react';
 
 const Login = () => {
       const { signIn } = useAuth()
       const navigate = useNavigate();
       const location = useLocation();
+      const [showError, setShowError] = useState('')
+      const [success, setSuccess] = useState('')
       const from = location.state?.from?.pathname || "/"
 
 
@@ -31,6 +34,9 @@ const Login = () => {
                               timer: 1500
                         });
                         navigate(from, { replace: true })
+                  }).catch(error => {
+                        setShowError('Invalid email or Password')
+                       
                   })
       }
 
@@ -67,7 +73,8 @@ const Login = () => {
                                                       <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                                 </label>
                                           </div>
-
+                                          <p className='text-red-700'>{showError} </p>
+                                          <p className='text-green-600'> {success}</p>
                                           <div className="form-control mt-4">
 
                                                 <input className="btn btn-primary bg-[#BC3433] border-0 hover:bg-slate-900" type="submit" value="login" />

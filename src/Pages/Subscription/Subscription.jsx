@@ -1,46 +1,27 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import PriceCartForSubscription from "../../Component/PriceCartForSubscription";
+import useAuth from "../../hooks/useAuth";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 const Subscription = () => {
       const [subscriptionPeriod, setSubscriptionPeriod] = useState('');
       const [message, setMessage] = useState('');
-
+      const {user}=useAuth()
       const handleSubscriptionChange = (event) => {
             setSubscriptionPeriod(event.target.value);
+            console.log(event.target.value);
       };
 
-      const handleSubscribe = async ({ userId }) => {
+      const handleSubscribe = async () => {
             if (!subscriptionPeriod) {
-                  setMessage('Please select a subscription period.');
-                  return;
+              setMessage('Please select a subscription period.');
+              return;
             }
-
-            try {
-                  const response = await fetch('/subscribe', {
-                        method: 'POST',
-                        headers: {
-                              'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                              userId,
-                              subscriptionPeriod,
-                        }),
-                  });
-
-                  const data = await response.json();
-
-                  if (response.ok) {
-                        setMessage(`Subscription successful. Premium membership until ${data.subscriptionEndDate}`);
-                  } else {
-                        setMessage(`Subscription failed. ${data.message}`);
-                  }
-            } catch (error) {
-                  console.error('Error subscribing:', error);
-                  setMessage('Internal server error.');
-            }
-      };
+        
+            
+          };
       return (
             <div className="max-w-6xl mx-auto ">
                   <div>

@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ALLArticleCard = ({ data, userHasSubscription }) => {
       const { title, image, isPremium, publisher, description, articalAuthorPhoto, articleAuthorName, _id} = data || {}
       const handleDetailsButtonClick = () => {
             if (isPremium && !userHasSubscription) {
-                  alert("You need to subscribe to access details for premium articles.");
-                  // You might want to redirect to a subscription page or show a modal.
-            } else {
-                  // Handle details button click for non-premium articles or when the user has a subscription.
-                  // Implement the logic according to your requirements.
-            }
+                  Swal.fire("You need to subscribe to access details for premium articles!");
+                  
+                  // baki kj pore korbo 
+            } 
       };
       return (
             <div className="relative flex max-w-[550px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">

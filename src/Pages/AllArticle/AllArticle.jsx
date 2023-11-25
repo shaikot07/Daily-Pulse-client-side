@@ -17,7 +17,7 @@ const AllArticle = () => {
 
       // infiniti loop ar kaj 
       const fetchMoreData = () => {
-            const newData = article.slice(0, page * itemParPage); // Adjust based on your needs
+            const newData = article.slice(0, page * itemParPage); 
             setFilteredData(newData);
             setPage(page + 1);
       };
@@ -85,12 +85,12 @@ const AllArticle = () => {
                         <h2 className='text-center text-4xl text-[#E31C25] font-semibold mt-12' >All Article</h2>
                   </div>
 
-                  {/* infiniti code start  */}
+                  {/* infiniti Loop code start  */}
 
                   <InfiniteScroll
                         dataLength={filteredData.length}
                         next={fetchMoreData}
-                        hasMore={true} // Set this to false when there is no more data to load
+                        hasMore={true} 
                         loader={<h4>Loading...</h4>}
                   >
                         <div className='grid gird-col-1 md:grid-cols-3 mt-8 gap-12'>
@@ -105,7 +105,7 @@ const AllArticle = () => {
                   </InfiniteScroll>
 
 
-                  {/* infiniti code end   */}
+                  {/* infiniti loop code end   */}
 
 
             </div>

@@ -53,7 +53,7 @@ const ArticleDetails = () => {
                               </p>
                         </div>
                         <div className=' mx-auto mt-5 mb-3'>
-                              <Link>
+                              <Link to="/allarticles">
                                     <button className="bg-red-700 p-3 text-white rounded-lg hover:bg-black"> Go Back Home </button>
                               </Link>
                         </div>
