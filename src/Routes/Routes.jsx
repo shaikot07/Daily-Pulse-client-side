@@ -13,6 +13,7 @@ import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import PremiumArticles from "../Pages/Dashboard/PremiumArticles/PremiumArticles";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 import MyArticle from "../Pages/Dashboard/MyArticle/MyArticle";
+import AddArticle from "../Pages/AddArticle/AddArticle";
 
 
 
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                   path:'/',
                   element:<Home></Home>
+            },
+            {
+                  path:'addarticles',
+                  element:<AddArticle></AddArticle>
             },
             
             {

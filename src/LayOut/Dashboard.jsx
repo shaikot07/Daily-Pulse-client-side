@@ -25,6 +25,10 @@ const Dashboard = () => {
                                     <FaBookReader />
                                     My Articles</NavLink>
                               </li>
+                              <li> <NavLink to="/">
+                              <FaHome></FaHome>
+                                    Home</NavLink>
+                              </li>
                         </ul>
                   </div>
                   {/* dashboard content  */}

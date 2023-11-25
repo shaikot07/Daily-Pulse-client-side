@@ -29,7 +29,7 @@
         "articleAuthorEmail": "jane.analyst@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-01-20",
-        "status": "Pending",
+        "status": "Published",
         " viewCount": 200,
         "premiumTaken": null
       },
@@ -63,7 +63,7 @@
         "articleAuthorEmail": "michael.space@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-02-10",
-        "status": "Pending",
+        "status": "Published",
         " viewCount": 100,
         "premiumTaken": null
       },
@@ -148,7 +148,7 @@
         "articleAuthorEmail": "ryan.business@example.com",
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-03-15",
-        "status": "Published",
+        "status": "Pending",
         " viewCount": 400,
         "premiumTaken": null
       },
