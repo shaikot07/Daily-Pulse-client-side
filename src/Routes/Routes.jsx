@@ -8,6 +8,11 @@ import ArticleDetails from "../Pages/AllArticle/ArticleDEtiles/ArticleDetails";
 import Subscription from "../Pages/Subscription/Subscription";
 import Payment from "../Component/Payment";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../LayOut/Dashboard";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import PremiumArticles from "../Pages/Dashboard/PremiumArticles/PremiumArticles";
+import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
+import MyArticle from "../Pages/Dashboard/MyArticle/MyArticle";
 
 
 
@@ -48,4 +53,27 @@ export const router = createBrowserRouter([
             },
         ]
       },
+      {
+            path:'dashboard',
+            element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+            children: [
+                  {
+                        path: 'userHome',
+                        element:<UserHome></UserHome>
+                  },
+                  {
+                        path: 'PremiumArticles',
+                        element:<PremiumArticles></PremiumArticles>
+                  },
+                  {
+                        path: 'profile',
+                        element:<MyProfile></MyProfile>
+                  },
+                  {
+                        path: 'myArticle',
+                        element:<MyArticle></MyArticle>
+                  },
+                  
+            ]
+      }
     ]);
