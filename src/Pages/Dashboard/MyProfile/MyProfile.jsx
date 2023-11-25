@@ -8,7 +8,7 @@ const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const MyProfile = () => {
-      const { user } = useAuth()
+      const { user , updatedUserProfile} = useAuth()
       const { register, handleSubmit, reset } = useForm();
       const axiosPublic = useAxiosPublic();
         
@@ -23,27 +23,9 @@ const MyProfile = () => {
             });
             // console.log(res.data);
             if (res.data.success) {
-                  // now send the menu item data to the server with the image url 
-                  const articleItem = {
-                        title: data.title,
-                       
-                        image: res.data.data.display_url,
-                       
-                  }
-                  // send data database here 
-                  // const articleRes = await axiosSecure.post('/article', articleItem);
-                  // // console.log(menuRes.data);
-                  // if (articleRes.data.insertedId) {
-                  //       // show success popup 
-                  //       reset();
-                  //       Swal.fire({
-                  //             position: "top-end",
-                  //             icon: "success",
-                  //             title: `${data.title} is added to the Article`,
-                  //             showConfirmButton: false,
-                  //             timer: 1500
-                  //       });
-                  // }
+                  // now update the data  
+                  updatedUserProfile(data.name,res.data.data.display_url);
+                        
             }
       }
 

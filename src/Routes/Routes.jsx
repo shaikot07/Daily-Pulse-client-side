@@ -14,6 +14,8 @@ import PremiumArticles from "../Pages/Dashboard/PremiumArticles/PremiumArticles"
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 import MyArticle from "../Pages/Dashboard/MyArticle/MyArticle";
 import AddArticle from "../Pages/AddArticle/AddArticle";
+import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateArticle";
+import UpdateArticle from "../Pages/Dashboard/UpdateItem/UpdateArticle";
 
 
 
@@ -78,6 +80,11 @@ export const router = createBrowserRouter([
                         path: 'myArticle',
                         element:<MyArticle></MyArticle>
                   },
+                  {
+                        path:'updateArticle/:id',
+                        element:<UpdateArticle></UpdateArticle>,
+                        loader:({params})=> fetch(`http://localhost:5000/article/${params.id}`)
+                      },
                   
             ]
       }

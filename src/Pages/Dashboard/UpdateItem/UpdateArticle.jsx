@@ -1,13 +1,19 @@
+
 import { useForm } from 'react-hook-form';
-import { FaBook, } from 'react-icons/fa';
-import useAxiosPublic from '../../hooks/useAxiosPublic';
+import { FaBook } from 'react-icons/fa';
+import useAxiosPublic from '../../../hooks/useAxiosPublic';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { Helmet } from 'react-helmet-async';
+import { useLoaderData } from 'react-router-dom';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
-const AddArticle = () => {
+
+const UpdateArticle = () => {
+      // const { title, image,  publisher, description, articleAuthorEmail, articleAuthorName,postedDate, _id}=useLoaderData()
+      const { item}=useLoaderData()
+       console.log('its form updated',item);
       const { register, handleSubmit, reset } = useForm();
       const axiosPublic = useAxiosPublic();
       const axiosSecure = useAxiosSecure()
@@ -55,8 +61,7 @@ const AddArticle = () => {
                   }
             }
       }
-      // console.log('with image url', res.data);
-      // console.log(data);
+
       return (
             <div >
                   <Helmet>
@@ -71,6 +76,7 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                // defaultValue={ title}
                                                 placeholder="Article Title"
                                                 {...register('title', { required: true })}
                                                 required
@@ -80,7 +86,7 @@ const AddArticle = () => {
                                           <label className="label">
                                                 <span className="label-text">Publisher*</span>
                                           </label>
-                                          <select defaultValue="default" {...register('publisher', { required: true })}
+                                          <select defaultValue={''} {...register('publisher', { required: true })}
                                                 className="select select-bordered w-full">
                                                 <option disabled value="default">Select a Publisher</option>
                                                 <option value="Science Daily">Science Daily</option>
@@ -99,6 +105,7 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                // defaultValue={description}
                                                 placeholder="description"
                                                 {...register('description', { required: true })}
                                                 required
@@ -110,6 +117,7 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                // defaultValue={articleAuthorName}
                                                 placeholder="article AuthorName"
                                                 {...register('articleAuthorName', { required: true })}
                                                 required
@@ -127,6 +135,7 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                // defaultValue={articleAuthorEmail}
                                                 placeholder="articleAuthorEmail"
                                                 {...register('articleAuthorEmail', { required: true })}
                                                 required
@@ -138,6 +147,7 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="date"
+                                                // defaultValue={postedDate}
                                                 placeholder="postedDate"
                                                 {...register('postedDate', { required: true })}
                                                 required
@@ -153,7 +163,7 @@ const AddArticle = () => {
                               </div>
 
                               <button className="btn bg-red-700 text-white hover:bg-black">
-                                    Post Article  <FaBook className="ml-4"></FaBook>
+                                    Update Article  <FaBook className="ml-4"></FaBook>
 
                               </button>
                         </form>
@@ -162,4 +172,4 @@ const AddArticle = () => {
       );
 };
 
-export default AddArticle;
+export default UpdateArticle;
