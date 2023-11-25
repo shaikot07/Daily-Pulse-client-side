@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignIn/SignUp";
 import AllArticle from "../Pages/AllArticle/AllArticle";
 import ArticleDetails from "../Pages/AllArticle/ArticleDEtiles/ArticleDetails";
 import Subscription from "../Pages/Subscription/Subscription";
+import Payment from "../Component/Payment";
 
 
 
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                   path:'subscription',
                   element:<Subscription></Subscription>
+            },
+            {
+                  path:'payment',
+                  element:<Payment></Payment>
             },
             {
                   path:'login',

@@ -13,7 +13,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/DV2Jf0K/download.jpg",
         "postedDate": "2023-01-15",
         "status": "Published",
-        " viewCount": 100
+        " viewCount": 100,
+        "premiumTaken": null
       },
       {
         
@@ -29,7 +30,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-01-20",
         "status": "Pending",
-        " viewCount": 200
+        " viewCount": 200,
+        "premiumTaken": null
       },
       {
         
@@ -45,7 +47,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/FgNS2GL/photo-1494790108377-be9c29b29330.jpg",
         "postedDate": "2023-02-05",
         "status": "Published",
-        " viewCount": 300
+        " viewCount": 300,
+        "premiumTaken": null
       },
       {
         
@@ -61,7 +64,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-02-10",
         "status": "Pending",
-        " viewCount": 100
+        " viewCount": 100,
+        "premiumTaken": null
       },
       {
         
@@ -77,7 +81,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/DV2Jf0K/download.jpg",
         "postedDate": "2023-02-18",
         "status": "Published",
-        " viewCount": 50
+        " viewCount": 50,
+        "premiumTaken": null
       },
       {
         
@@ -93,7 +98,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-02-25",
         "status": "Published",
-        " viewCount": 700
+        " viewCount": 700,
+        "premiumTaken": null
       },
       {
         
@@ -109,7 +115,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/FgNS2GL/photo-1494790108377-be9c29b29330.jpg",
         "postedDate": "2023-03-05",
         "status": "Published",
-        " viewCount": 30
+        " viewCount": 30,
+        "premiumTaken": null
       },
       {
         
@@ -125,7 +132,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-03-10",
         "status": "Pending",
-        " viewCount": 200
+        " viewCount": 200,
+        "premiumTaken": null
       },
       {
        
@@ -141,7 +149,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/Y7Ck5Zj/gymwonrer.jpg",
         "postedDate": "2023-03-15",
         "status": "Published",
-        " viewCount": 400
+        " viewCount": 400,
+        "premiumTaken": null
       },
       {
        
@@ -157,7 +166,8 @@
         "articalAuthorPhoto": "https://i.ibb.co/23pwKcL/download-1.jpg",
         "postedDate": "2023-03-20",
         "status": "Published",
-        " viewCount": 10
+        " viewCount": 10,
+        "premiumTaken": null
       }
     ]
     
