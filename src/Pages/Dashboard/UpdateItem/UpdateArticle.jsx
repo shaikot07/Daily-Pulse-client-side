@@ -5,19 +5,21 @@ import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
+import useArticle from '../../../hooks/useArticle';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const UpdateArticle = () => {
       // const { title, image,  publisher, description, articleAuthorEmail, articleAuthorName,postedDate, _id}=useLoaderData()
-      const { item}=useLoaderData()
-       console.log('its form updated',item);
+      const {item}=useLoaderData()
+      console.log("loader data",item);
       const { register, handleSubmit, reset } = useForm();
       const axiosPublic = useAxiosPublic();
       const axiosSecure = useAxiosSecure()
 
+      
       const onSubmit = async (data) => {
             console.log(data)
             // image uploade to imgbb and then get an url
