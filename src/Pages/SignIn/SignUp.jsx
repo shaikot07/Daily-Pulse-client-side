@@ -29,6 +29,7 @@ const SignUp = () => {
                                           email: data.email,
                                           status: 'normal',
                                           subscription: null,
+                                          image:data.photo
                                     }
                                     axiosPublic.post('/users', userInfo)
                                           .then(res => {
