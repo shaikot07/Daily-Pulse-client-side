@@ -54,7 +54,7 @@ const PublisherCard = ({ data, userHasSubscription }) => {
                               </button>
                         ) : (
                               <Link to={`/articledetils/${_id}`}>
-                                    <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black">
+                                    <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
                                           View Detail Button
                                     </button>
                               </Link>

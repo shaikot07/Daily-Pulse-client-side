@@ -18,6 +18,7 @@ import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateArticle";
 import UpdateArticle from "../Pages/Dashboard/UpdateItem/UpdateArticle";
 import AdminHome from "../Pages/Dashboard/Admin/AdminHome/AdminHome";
 import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
+import AdminAllArticlePage from "../Pages/Dashboard/Admin/AdminAllArticlePage/AdminAllArticlePage";
 
 
 
@@ -97,6 +98,10 @@ export const router = createBrowserRouter([
                   {
                         path:'allUser',
                         element:<AllUser></AllUser>
+                  },
+                  {
+                        path:'allArticle',
+                        element:<AdminAllArticlePage></AdminAllArticlePage>
                   },
                   
             ]
