@@ -13,7 +13,7 @@ const Publisher = () => {
                                     <figure>
                                           <img src={item.image} alt={item.publisherName} />
                                     </figure>
-
+                                    <h2 className='text-[#B80000] text-1xl font-bold p-1 mt-4 ml-2'>{item.publisherName}</h2>
                               </div>
                         ))}
                   </div>
