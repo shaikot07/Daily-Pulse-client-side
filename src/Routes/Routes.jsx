@@ -16,6 +16,8 @@ import MyArticle from "../Pages/Dashboard/MyArticle/MyArticle";
 import AddArticle from "../Pages/AddArticle/AddArticle";
 import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateArticle";
 import UpdateArticle from "../Pages/Dashboard/UpdateItem/UpdateArticle";
+import AdminHome from "../Pages/Dashboard/Admin/AdminHome/AdminHome";
+import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
 
 
 
@@ -64,6 +66,7 @@ export const router = createBrowserRouter([
             path:'dashboard',
             element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
             children: [
+                  // normal user routers 
                   {
                         path: 'userHome',
                         element:<UserHome></UserHome>
@@ -84,6 +87,16 @@ export const router = createBrowserRouter([
                         path:'updateArticle/:id',
                         element:<UpdateArticle></UpdateArticle>,
                        
+                  },
+                  
+                  // admin only routes 
+                  {
+                        path:'adminHome',
+                        element:<AdminHome></AdminHome>
+                  },
+                  {
+                        path:'allUser',
+                        element:<AllUser></AllUser>
                   },
                   
             ]
