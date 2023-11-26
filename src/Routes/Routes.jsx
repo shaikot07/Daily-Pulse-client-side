@@ -20,6 +20,7 @@ import AdminHome from "../Pages/Dashboard/Admin/AdminHome/AdminHome";
 import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
 import AdminAllArticlePage from "../Pages/Dashboard/Admin/AdminAllArticlePage/AdminAllArticlePage";
 import AddPublisher from "../Pages/Dashboard/Admin/AddPublisher/Addpublisher";
+import ErrorPage from "../Component/ErrorPage";
 
 
 
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                   path:'/',
