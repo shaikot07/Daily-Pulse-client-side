@@ -7,14 +7,17 @@ import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData, useParams } from 'react-router-dom';
 import useArticle from '../../../hooks/useArticle';
+import useAddArticle from '../../../hooks/useAddArticle';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const UpdateArticle = () => {
-      // const { title, image,  publisher, description, articleAuthorEmail, articleAuthorName,postedDate, _id}=useLoaderData()
-      const {item}=useLoaderData()
-      console.log("loader data",item);
+      const { id } = useParams()
+      const [addArticle,refetch] = useAddArticle()
+      const foundData = addArticle.find((item) => item._id == id);
+      console.log("this found data ",foundData);
+      const { title, image, publisher, postedDate,  articleAuthorEmail, description,  articleAuthorName, _id } = foundData || {}
       const { register, handleSubmit, reset } = useForm();
       const axiosPublic = useAxiosPublic();
       const axiosSecure = useAxiosSecure()
@@ -40,23 +43,24 @@ const UpdateArticle = () => {
                         articleAuthorEmail: data.articleAuthorEmail,
                         postedDate: data.postedDate,
                         image: res.data.data.display_url,
-                        isPremium: true,
-                        isVisible: false,
-                        status: "Pending",
-                        viewCount: 200,
-                        premiumTaken: null,
-                        tags: ["Travel", "Adventure"],
+                        // isPremium: true,
+                        // isVisible: false,
+                        // status: "Pending",
+                        // viewCount: 200,
+                        // premiumTaken: null,
+                        // tags: ["Travel", "Adventure"],
                   }
                   // send data database here 
-                  const articleRes = await axiosSecure.post('/article', articleItem);
-                  // console.log(menuRes.data);
-                  if (articleRes.data.insertedId) {
+                  // send data database here 
+                  const menuRes = await axiosSecure.patch(`/article/${_id}`, articleItem);
+                  console.log(menuRes.data);
+                  if (menuRes.data.modifiedCount) {
                         // show success popup 
                         reset();
                         Swal.fire({
                               position: "top-end",
                               icon: "success",
-                              title: `${data.title} is added to the Article`,
+                              title: `${data.title} is Updated Article`,
                               showConfirmButton: false,
                               timer: 1500
                         });
@@ -67,7 +71,7 @@ const UpdateArticle = () => {
       return (
             <div >
                   <Helmet>
-                        <title>DailyPulse || Add Article</title>
+                        <title>DailyPulse || Update Article</title>
                   </Helmet>
                   <div className='max-w-6xl mx-auto'>
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +82,7 @@ const UpdateArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
-                                                // defaultValue={ title}
+                                                defaultValue={ title}
                                                 placeholder="Article Title"
                                                 {...register('title', { required: true })}
                                                 required
@@ -99,6 +103,7 @@ const UpdateArticle = () => {
                                           </select>
                                     </div>
                               </div>
+                               {/*second part */}
                               <div className="flex gap-6">
 
                                     <div className="form-control w-full my-6">
@@ -107,7 +112,7 @@ const UpdateArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
-                                                // defaultValue={description}
+                                                defaultValue={description}
                                                 placeholder="description"
                                                 {...register('description', { required: true })}
                                                 required
@@ -119,7 +124,7 @@ const UpdateArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
-                                                // defaultValue={articleAuthorName}
+                                                defaultValue={articleAuthorName}
                                                 placeholder="article AuthorName"
                                                 {...register('articleAuthorName', { required: true })}
                                                 required
@@ -128,7 +133,7 @@ const UpdateArticle = () => {
 
 
                               </div>
-                              {/* recipe details */}
+                              {/*third part */}
                               <div className="flex gap-6">
 
                                     <div className="form-control w-full my-6">
@@ -137,7 +142,7 @@ const UpdateArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
-                                                // defaultValue={articleAuthorEmail}
+                                                defaultValue={articleAuthorEmail}
                                                 placeholder="articleAuthorEmail"
                                                 {...register('articleAuthorEmail', { required: true })}
                                                 required
@@ -145,11 +150,11 @@ const UpdateArticle = () => {
                                     </div>
                                     <div className="form-control w-full my-6">
                                           <label className="label">
-                                                <span className="label-text">posted Date*</span>
+                                                <span className="label-text">Posted Date*</span>
                                           </label>
                                           <input
                                                 type="date"
-                                                // defaultValue={postedDate}
+                                                defaultValue={postedDate}
                                                 placeholder="postedDate"
                                                 {...register('postedDate', { required: true })}
                                                 required

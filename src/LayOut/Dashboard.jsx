@@ -9,6 +9,14 @@ const Dashboard = () => {
                   <div className='w-64 min-h-screen bg-[#B80000]'>
                         {/* dashboard side bar  */}
                         <ul className='menu p-4 text-white'>
+
+                              admim or jonno
+
+
+
+
+
+                              {/* normal user  */}
                               <li> <NavLink to="/dashboard/userHome">
                                     <FaHome></FaHome>
                                     User Home</NavLink>

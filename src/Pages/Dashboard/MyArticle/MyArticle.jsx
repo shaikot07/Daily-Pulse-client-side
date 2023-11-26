@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const MyArticle = () => {
-      const [addArticle,refetch] = useAddArticle()
+      const [addArticle,refetch] = useAddArticle();
       console.log(addArticle);
 
       const axiosSecure = useAxiosSecure()
