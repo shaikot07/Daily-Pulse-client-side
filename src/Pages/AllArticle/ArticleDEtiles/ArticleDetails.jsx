@@ -54,7 +54,7 @@ const ArticleDetails = () => {
                         </div>
                         <div className=' mx-auto mt-5 mb-3'>
                               <Link to="/allarticles">
-                                    <button className="bg-red-700 p-3 text-white rounded-lg hover:bg-black"> Go Back Home </button>
+                                    <button className="bg-red-700 p-3 text-white rounded-lg hover:bg-black"> Go Back one step </button>
                               </Link>
                         </div>
                   </div>

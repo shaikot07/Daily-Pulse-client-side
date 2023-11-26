@@ -3,7 +3,7 @@ import React from 'react';
 const UserHome = () => {
       return (
             <div>
-                  this is a user home 
+                 <h1 className='text-6xl font bold text-center mt-20'>Nodata Avible</h1>
             </div>
       );
 };

@@ -21,6 +21,7 @@ import AllUser from "../Pages/Dashboard/Admin/AllUser/AllUser";
 import AdminAllArticlePage from "../Pages/Dashboard/Admin/AdminAllArticlePage/AdminAllArticlePage";
 import AddPublisher from "../Pages/Dashboard/Admin/AddPublisher/Addpublisher";
 import ErrorPage from "../Component/ErrorPage";
+import AdminPrivateRoute from "./AdminPrivateRoute";
 
 
 
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
             },
             {
                   path:'addarticles',
-                  element:<AddArticle></AddArticle>
+                  element:<PrivateRoute><AddArticle></AddArticle></PrivateRoute>
             },
             
             {
@@ -50,7 +51,7 @@ export const router = createBrowserRouter([
             },
             {
                   path:'subscription',
-                  element:<Subscription></Subscription>
+                  element:<PrivateRoute><Subscription></Subscription></PrivateRoute>
             },
             {
                   path:'payment',
@@ -77,15 +78,15 @@ export const router = createBrowserRouter([
                   },
                   {
                         path: 'PremiumArticles',
-                        element:<PremiumArticles></PremiumArticles>
+                        element:<PrivateRoute><PremiumArticles></PremiumArticles></PrivateRoute>
                   },
                   {
                         path: 'profile',
-                        element:<MyProfile></MyProfile>
+                        element:<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
                   },
                   {
                         path: 'myArticle',
-                        element:<MyArticle></MyArticle>
+                        element:<PrivateRoute><MyArticle></MyArticle></PrivateRoute>
                   },
                   {
                         path:'updateArticle/:id',
@@ -96,19 +97,19 @@ export const router = createBrowserRouter([
                   // admin only routes 
                   {
                         path:'adminHome',
-                        element:<AdminHome></AdminHome>
+                        element:<AdminPrivateRoute><AdminHome></AdminHome></AdminPrivateRoute>
                   },
                   {
                         path:'allUser',
-                        element:<AllUser></AllUser>
+                        element:<AdminPrivateRoute><AllUser></AllUser></AdminPrivateRoute>
                   },
                   {
                         path:'allArticle',
-                        element:<AdminAllArticlePage></AdminAllArticlePage>
+                        element:<AdminPrivateRoute><AdminAllArticlePage></AdminAllArticlePage></AdminPrivateRoute>
                   },
                   {
                         path:'addPublisher',
-                        element:<AddPublisher></AddPublisher>
+                        element:<AdminPrivateRoute><AddPublisher></AddPublisher></AdminPrivateRoute>
                   },
                   
             ]

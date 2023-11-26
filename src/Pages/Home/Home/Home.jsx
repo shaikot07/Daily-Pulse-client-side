@@ -9,7 +9,7 @@ import SectionTitle from '../../../Component/SectionTitle';
 
 const Home = () => {
       return (
-            <div>
+            <div className='px-6'>
                   <Helmet>
                         <title>DailyPulse || Home</title>
                   </Helmet>

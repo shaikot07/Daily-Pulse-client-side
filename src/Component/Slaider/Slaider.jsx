@@ -26,7 +26,7 @@ const Slaider = () => {
                               <SwiperSlide>
                                     <div className='mx-auto w-full'>
                                           <img className='h-[300px] w-full' src="https://i.ibb.co/ZTPJPnd/slaider-01.webp" alt="" />
-                                          <h2 className='md:absolute -mt-16  text-black font-bold ml-6 text-5xl'>Israeli forces detain director of Gaza's al-Shifa Hospital</h2>
+                                          <h2 className='md:absolute -mt-16  text-black font-bold ml-6 text-1xl md:text-5xl'>Israeli forces detain director of Gaza's al-Shifa Hospital</h2>
                                     </div>
                               </SwiperSlide>
                              

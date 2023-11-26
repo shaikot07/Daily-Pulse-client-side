@@ -2,8 +2,10 @@ import React from 'react';
 import { FaAddressBook, FaBook, FaBookReader, FaHome, FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import { MdPublish } from "react-icons/md";
+import useAdmin from '../hooks/useAdmin';
 const Dashboard = () => {
-      const isAdmin = true;
+      // const isAdmin = true;
+      const [isAdmin]=useAdmin()
       return (
             <div className='flex'>
                   <div className='w-64 min-h-screen bg-[#B80000]'>

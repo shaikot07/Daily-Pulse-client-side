@@ -11,12 +11,15 @@ const Navbar = () => {
 
       const navOption = <>
             <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
-            <li> <NavLink to="/addarticles" className="hover:bg-black hover:text-white" >Add Articles</NavLink></li>
+            
             <li> <NavLink to="/allarticles" className="hover:bg-black hover:text-white" >All Articles</NavLink></li>
-            <li> <NavLink to="/subscription" className="hover:bg-black hover:text-white" >Subscription</NavLink></li>
-            <li> <NavLink to="/dashboard" className="hover:bg-black hover:text-white" >Dashboard</NavLink></li>
+            
+            
             {
                   user ? <>
+                        <li> <NavLink to="/addarticles" className="hover:bg-black hover:text-white" >Add Articles</NavLink></li>
+                        <li> <NavLink to="/subscription" className="hover:bg-black hover:text-white" >Subscription</NavLink></li>
+                        <li> <NavLink to="/dashboard" className="hover:bg-black hover:text-white" >Dashboard</NavLink></li>
                         <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
                   </> : <>
 
