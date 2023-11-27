@@ -27,7 +27,7 @@ const AdminHome = () => {
       return (
             <div>
                   <div>
-                        {/* Render your chart using react-google-charts */}
+                        
                         <Chart
                               chartType="PieChart"
                               data={data}

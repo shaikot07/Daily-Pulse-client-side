@@ -4,13 +4,15 @@ import useAxiosPublic from '../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { Helmet } from 'react-helmet-async';
+import useAuth from '../../hooks/useAuth';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const AddArticle = () => {
       const { register, handleSubmit, reset } = useForm();
       const axiosPublic = useAxiosPublic();
-      const axiosSecure = useAxiosSecure()
+      const axiosSecure = useAxiosSecure();
+      const {user,loading}=useAuth()
 
       const onSubmit = async (data) => {
             console.log(data)
@@ -28,11 +30,11 @@ const AddArticle = () => {
                         title: data.title,
                         publisher: data.publisher,
                         description: data.description,
-                        articleAuthorName: data.articleAuthorName,
-                        articleAuthorEmail: data.articleAuthorEmail,
+                        articleAuthorName: user.displayName,
+                        articleAuthorEmail: user.email,
                         postedDate: data.postedDate,
                         image: res.data.data.display_url,
-                        isPremium: true,
+                        isPremium: false,
                         isVisible: false,
                         status: "Pending",
                         viewCount: 200,
@@ -110,8 +112,9 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                value={user.displayName}
                                                 placeholder="article AuthorName"
-                                                {...register('articleAuthorName', { required: true })}
+                                                // {...register('articleAuthorName', { required: true })}
                                                 required
                                                 className="input input-bordered w-full" />
                                     </div>
@@ -127,8 +130,9 @@ const AddArticle = () => {
                                           </label>
                                           <input
                                                 type="text"
+                                                value={user.email}
                                                 placeholder="articleAuthorEmail"
-                                                {...register('articleAuthorEmail', { required: true })}
+                                                // {...register('articleAuthorEmail', { required: true })}
                                                 required
                                                 className="input input-bordered w-full" />
                                     </div>

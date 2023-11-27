@@ -43,11 +43,11 @@ export const router = createBrowserRouter([
             
             {
                   path:'allarticles',
-                  element:<PrivateRoute><AllArticle></AllArticle></PrivateRoute>
+                  element:<AllArticle></AllArticle>
             },
             {
                   path:'articledetils/:id',
-                  element:<ArticleDetails></ArticleDetails>
+                  element:<PrivateRoute><ArticleDetails></ArticleDetails></PrivateRoute>
             },
             {
                   path:'subscription',

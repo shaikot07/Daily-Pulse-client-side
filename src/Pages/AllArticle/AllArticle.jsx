@@ -91,7 +91,7 @@ const AllArticle = () => {
                         dataLength={filteredData.length}
                         next={fetchMoreData}
                         hasMore={true} 
-                        loader={<h4>Loading...</h4>}
+                        loader={showLoader ?'' : null }
                   >
                         <div className='grid gird-col-1 md:grid-cols-3 mt-8 gap-12'>
                               {filteredData.map((data, index) => (

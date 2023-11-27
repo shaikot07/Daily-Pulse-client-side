@@ -10,7 +10,7 @@ const useAddArticle = () => {
       const {  data: addArticle = [],refetch } = useQuery({
             queryKey: ['article', user?.email],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`/article?email=${user.email}`)
+                  const res = await axiosSecure.get(`/article/user?email=${user.email}`)
                   // console.log(res);
                   return res.data
             }

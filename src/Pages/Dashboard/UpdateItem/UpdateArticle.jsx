@@ -143,6 +143,7 @@ const UpdateArticle = () => {
                                           <input
                                                 type="text"
                                                 defaultValue={articleAuthorEmail}
+                                                readOnly
                                                 placeholder="articleAuthorEmail"
                                                 {...register('articleAuthorEmail', { required: true })}
                                                 required
