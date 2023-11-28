@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import Slaider from '../../../Component/Slaider/Slaider';
 import UserCounter from '../UserCounter/UserCounter';
@@ -11,19 +11,23 @@ import MostRead from '../../../Component/MostRead/MostRead';
 
 
 const Home = () => {
+
       return (
             <div className='px-6'>
                   <Helmet>
                         <title>DailyPulse || Home</title>
                   </Helmet>
                   <MarQuey></MarQuey>
+                  <div>
+
+                  </div>
                   <div className='max-w-6xl mx-auto  mt-10'>
                         <SectionTitle title="Trending News"></SectionTitle>
-                  <Slaider></Slaider>
+                        <Slaider></Slaider>
                   </div>
                   <div className='max-w-6xl mx-auto mt-20'>
                         <SectionTitle title="Latest News"></SectionTitle>
-                  <HelpHome></HelpHome>
+                        <HelpHome></HelpHome>
                   </div>
                   <UserCounter></UserCounter>
                   <Priceing></Priceing>
@@ -31,10 +35,14 @@ const Home = () => {
                         <Publisher></Publisher>
                   </div>
                   <div className='max-w-6xl mx-auto mt-20'>
-                  <SectionTitle title="Most read"></SectionTitle>
+                        <SectionTitle title="Most read"></SectionTitle>
                         <MostRead></MostRead>
                   </div>
             </div>
+
+
+
+
       );
 };
 
