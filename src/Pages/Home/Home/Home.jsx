@@ -8,6 +8,7 @@ import SectionTitle from '../../../Component/SectionTitle';
 import MarQuey from '../../../Component/MarQuey/MarQuey';
 import HelpHome from '../../../Component/Help-Home/HelpHome';
 import MostRead from '../../../Component/MostRead/MostRead';
+import TesrtContact from '../../Shared/TesrtContact';
 
 
 const Home = () => {
@@ -37,6 +38,10 @@ const Home = () => {
                   <div className='max-w-6xl mx-auto mt-20'>
                         <SectionTitle title="Most read"></SectionTitle>
                         <MostRead></MostRead>
+                  </div>
+                  <div className='max-w-6xl mx-auto mt-20'>
+                  <SectionTitle title='Reach Out'></SectionTitle>
+                        <TesrtContact></TesrtContact>
                   </div>
             </div>
 
