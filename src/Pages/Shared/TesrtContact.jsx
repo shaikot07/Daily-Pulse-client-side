@@ -27,7 +27,7 @@ const TesrtContact = () => {
       return (
             <div className="my-container overflow-x-hidden py-4" id="contact">
             
-            <form ref={form} onSubmit={sendEmail} className='space-y-4 my-6'>
+            <form ref={form} onSubmit={sendEmail} className='space-y-4 my-6 bg-[#1F2937] p-6 rounded-md'>
                 <div className='space-y-2'>
                     <label className='text-slate-300 font-semibold'>Name</label>
                     <input className='my-inp' type="text" name="user_name" placeholder='Your name' />

@@ -6,12 +6,12 @@
 
 
 
-body{
-      /* background: #1f1f1f; */
+/* body{
+      background: #1f1f1f;
       background: #081229;
       color: #fff;
      
-}
+} */
 
 
 
@@ -20,7 +20,7 @@ body{
     }
     
     .my-inp{
-      @apply block w-full p-3 bg-[#081229] text-slate-200 placeholder:text-slate-600 shadow-inner shadow-[#B80000] border-none rounded focus:outline-none
+      @apply block w-full p-3 bg-[#081229] text-black placeholder:text-slate-600 shadow-inner shadow-[#B80000] border-none rounded focus:outline-none
     }
     
     .cmn-btn-one{
