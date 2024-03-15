@@ -73,11 +73,11 @@ const AllArticle = () => {
                   <div className='max-w-[12rem] mx-auto mt-2 '>
 
                         <div className="dropdown dropdown-right dropdown-end">
-                              <label tabIndex={0} className="btn m-1">Filtered by publisher</label>
-                              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a onClick={() => handleMenuItemClick('Science Daily')}>Science Daily</a></li>
-                                    <li><a onClick={() => handleMenuItemClick('National Geographic')}>National Geographic</a></li>
-                                    <li><a onClick={() => handleMenuItemClick('Tech Innovations')}>Tech Innovations</a></li>
+                              <label tabIndex={0} className="btn hover:bg-red-700 hover:text-white m-1">Filtered by publisher</label>
+                              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-300 rounded-box w-52 ">
+                                    <li className='hover:bg-red-400 rounded-lg'><a onClick={() => handleMenuItemClick('Science Daily')}>Science Daily</a></li>
+                                    <li className='hover:bg-red-400 rounded-lg'><a onClick={() => handleMenuItemClick('National Geographic')}>National Geographic</a></li>
+                                    <li className='hover:bg-red-400 rounded-lg'><a onClick={() => handleMenuItemClick('Tech Innovations')}>Tech Innovations</a></li>
                               </ul>
                         </div>
                   </div>
