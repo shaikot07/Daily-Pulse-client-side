@@ -31,18 +31,22 @@ const AllArticle = () => {
 
       const handleScience = () => {
             const scienceData = article.filter(item => item.publisher.toUpperCase() === 'SCIENCE DAILY');
+            setShowLoader(true)
             setFilteredData(scienceData);
             setSelectedMenuItem('Science Daily');
       };
 
       const nationalGeographic = () => {
+
             const nationalGeographicData = article.filter(item => item.publisher.toUpperCase() === 'NATIONAL GEOGRAPHIC');
+            setShowLoader(true)
             setFilteredData(nationalGeographicData);
             setSelectedMenuItem('National Geographic');
       };
 
       const techInnovations = () => {
             const techInnovationsData = article.filter(item => item.publisher.toUpperCase() === 'TECH INNOVATIONS');
+            setShowLoader(true)
             setFilteredData(techInnovationsData);
             setSelectedMenuItem('Tech Innovations');
       };
@@ -94,9 +98,9 @@ const AllArticle = () => {
                         hasMore={true} 
                         loader={showLoader ?'' : null }
                   >
-                        <div className='grid gird-col-1 md:grid-cols-3 mt-8 gap-12'>
+                        <div className='grid gird-col-1 md:grid-cols-3 mt-8 gap-8'>
                               {filteredData.map((data, index) => (
-                                    <PublisherCard key={index} data={data} userHasSubscription={userHasSubscription} />
+                                    <PublisherCard key={index} data={data} userHasSubscription={userHasSubscription} showLoader={showLoader}/>
                               ))}
                               {article
                                     .filter(df => !searchInput ? true : df.title.toUpperCase() === searchInput.toUpperCase())
