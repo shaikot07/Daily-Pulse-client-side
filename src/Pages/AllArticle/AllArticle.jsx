@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import ALLArticleCard from './ALLArticleCard';
 import PublisherCard from './PublisherCard';
@@ -66,7 +67,7 @@ const AllArticle = () => {
 
                               <div className="flex ">
                                     <span className="flex items-center py-3 px-3 bg-[#E31C25] pointer-events-none sm:text-sm rounded-l-md dark:bg-gray-700 text-white font-bold hover:bg-slate-950">Search</span>
-                                    <input onChange={(e) => setSearchInput(e.target.value)} type="text" name="url" id="url" placeholder="Type here news Title" className="flex flex-1 border sm:text-sm rounded-r-md focus:ri dark:border-gray-700 dark:text-gray-100 dark:bg-gray-800 focus:ri" />
+                                    <input onChange={(e) => setSearchInput(e.target.value)} type="text" name="url" id="url" placeholder=" Type here news Title" className="flex flex-1 border sm:text-sm rounded-r-md focus:ri dark:border-gray-700 dark:text-gray-100 dark:bg-gray-800 focus:ri" />
                               </div>
                         </fieldset>
                   </div>

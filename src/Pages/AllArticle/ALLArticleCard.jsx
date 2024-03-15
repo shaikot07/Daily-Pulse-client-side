@@ -7,7 +7,7 @@ const ALLArticleCard = ({ data, userHasSubscription }) => {
       const handleDetailsButtonClick = () => {
             if (isPremium && !userHasSubscription) {
                   Swal.fire("You need to subscribe to access details for premium articles!");
-
+                 
                   // baki kj pore korbo 
             }
       };
@@ -19,7 +19,7 @@ const ALLArticleCard = ({ data, userHasSubscription }) => {
                                     <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                                           <img className='rounded-lg'
                                                 src={image}
-                                                alt="ui/ux review check"
+                                                alt=" "
                                           />
                                     </div>
                                     <div className="p-6">
