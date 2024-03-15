@@ -6,9 +6,9 @@ const MostRead = () => {
                  
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
                               <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">1</span>Measures included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
-                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">2</span>Measures included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
-                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">3</span>Measures included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
-                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">4</span>Measures included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
+                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">2</span>Aseasures included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
+                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">3</span>Included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
+                              <p> <span className="text-2xl font-bold text-[#B80000] mr-1 ">4</span>Toms included restricting the number of tobacco retailers, and reducing the level of nicotine in cigarettes</p>
                         </div>
                   
                   <div className="bg-slate-300 p-4">

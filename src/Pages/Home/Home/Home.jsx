@@ -36,7 +36,7 @@ const Home = () => {
                         <Publisher></Publisher>
                   </div>
                   <div className='max-w-6xl mx-auto mt-20'>
-                        <SectionTitle title="Most read"></SectionTitle>
+                        <SectionTitle title="Most Read"></SectionTitle>
                         <MostRead></MostRead>
                   </div>
                   <div className='max-w-6xl mx-auto mt-20'>

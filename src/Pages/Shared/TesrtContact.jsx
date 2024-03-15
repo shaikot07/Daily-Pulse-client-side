@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
-import SectionTitle2 from './SectionTitle2';
+
 
 const TesrtContact = () => {
       const form = useRef();

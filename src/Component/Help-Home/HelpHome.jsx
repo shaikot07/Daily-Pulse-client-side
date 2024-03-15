@@ -10,12 +10,12 @@ const HelpHome = () => {
                                           <img className="rounded-t-lg" src="https://i.ibb.co/7b1xVJW/home-1.webp" alt="" />
                                     </a>
                                     <div className="p-5">
-                                          <a href="#">
+                                          <a href="">
                                                 <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">Thai groom kills four at wedding, including bride</h5>
                                           </a>
                                           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Thai media, citing what guests at the party told the police, said the couple had an argument during .</p>
                                           <Link to="/allarticles">
-                                          <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                          <a href="" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 Read more
 
                                           </a>
@@ -24,7 +24,7 @@ const HelpHome = () => {
                               </div>
                               
                               <div className="max-w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                    <a href="#">
+                                    <a href="">
                                           <img className="rounded-t-lg" src="https://i.ibb.co/FwmVVkr/home-02.webp" alt="" />
                                     </a>
                                     <div className="p-5">
@@ -33,7 +33,7 @@ const HelpHome = () => {
                                           </a>
                                           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Thai media, citing what guests at the party told the police, said the couple had an argument during .</p>
                                           <Link to="/allarticles">
-                                          <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                          <a href="" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 Read more
 
                                           </a>
@@ -41,16 +41,16 @@ const HelpHome = () => {
                                     </div>
                               </div>
                               <div className="max-w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                    <a href="#">
+                                    <a href="">
                                           <img className="rounded-t-lg" src="https://i.ibb.co/6bprdLG/home-03.webp" alt="" />
                                     </a>
                                     <div className="p-5">
-                                          <a href="#">
+                                          <a href="">
                                                 <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">Thai groom kills four at wedding, including bride</h5>
                                           </a>
                                           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Thai media, citing what guests at the party told the police, said the couple had an argument during .</p>
                                           <Link to="/allarticles">
-                                          <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                          <a href="" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#B80000] rounded-lg hover:bg-black  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 Read more
 
                                           </a>
