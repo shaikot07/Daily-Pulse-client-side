@@ -30,6 +30,35 @@ const AllUser = () => {
                         }
                   })
       }
+      const handleDeleteUser = (user) => {
+            Swal.fire({
+                  title: "Are you sure?",
+                  text: "You won't be able to revert this!",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#3085d6",
+                  cancelButtonColor: "#d33",
+                  confirmButtonText: "Yes, delete it!"
+            }).then(async (result) => {
+                  if (result.isConfirmed) {
+                        const res = await axiosSecure.delete(`/users/admin/${user._id}`);
+                        // console.log(res.data);
+                        if (res.data.deletedCount > 0) {
+                              // refetch to update the ui
+                              refetch();
+                              Swal.fire({
+                                    position: "top-end",
+                                    icon: "success",
+                                    title: ` has been deleted`,
+                                    showConfirmButton: false,
+                                    timer: 1500
+                              });
+                        }
+
+
+                  }
+            });
+      }
       return (
             <div>
 
@@ -79,7 +108,7 @@ const AllUser = () => {
                                                 </td>
                                                 <td>
                                                       <button
-                                                            // onClick={() => handleDeleteUser(user)}
+                                                            onClick={() => handleDeleteUser(user)}
                                                             className='btn btn-ghost btn-lg'>
                                                             <FaTrashAlt className='text-red-600'></FaTrashAlt>
                                                       </button>
