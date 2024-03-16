@@ -7,7 +7,7 @@ const ALLArticleCard = ({ data, userHasSubscription }) => {
       const handleDetailsButtonClick = () => {
             if (isPremium && !userHasSubscription) {
                   Swal.fire("You need to subscribe to access details for premium articles!");
-                 
+
                   // baki kj pore korbo 
             }
       };
@@ -15,102 +15,74 @@ const ALLArticleCard = ({ data, userHasSubscription }) => {
             <>
                   {
                         isPremium && !userHasSubscription ? <>
-                              <div className="relative flex max-w-[550px] flex-col rounded-xl bg-purple-500 bg-clip-border text-gray-700 shadow-md">
-                                    <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
-                                          <img className='rounded-lg'
-                                                src={image}
-                                                alt=" "
-                                          />
-                                    </div>
-                                    <div className="p-6">
-                                          <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-[#E31C25] ">
-                                                <span className='text-black'>Title:</span>  {title}
-                                          </h4>
+                              <div className="">
+                                    <div className="max-w-[330px] h-[467px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                          <img className="rounded-t-lg object-cover w-[330px] h-[170px]" src={image} alt="" />
 
-                                          <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                                                {description}
-                                          </p>
-                                          <h2 className='text-2xl mt-4 text-[#E31C25]'><span className='text-black'>Publisher: {publisher}</span> </h2>
-                                    </div>
-                                    <div className="flex items-center justify-between p-6">
-                                          <div className="flex items-center gap-4">
-                                                <img alt="" className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri" src={articalAuthorPhoto} />
-                                                <h2 className='text-2xl font-bold text-[#E31C25] '>{articleAuthorName}</h2>
-
+                                          <div className="p-5 w-full h-[184px] ">
+                                                <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+                                                <p className="mb-3 text-1xl font-semibold text-gray-800 dark:text-gray-400">publisher: {publisher}</p>
+                                                <div className="flex items-center justify-between py-2">
+                                                      <div className="flex items-center gap-4">
+                                                            <img alt="" className="w-10 h-10 rounded-full bg-gray-500" src={articalAuthorPhoto} />
+                                                            <h2 className="text-base font-bold text-[#E31C25]">{articleAuthorName}</h2>
+                                                      </div>
+                                                </div>
+                                                <div className='w-full mx-auto mt-2 mb-0'>
+                                                      {isPremium && !userHasSubscription ? (
+                                                            <button
+                                                                  onClick={handleDetailsButtonClick}
+                                                                  className="bg-[#E31C25] text-white p-2 w-full rounded-lg cursor-not-allowed opacity-50"
+                                                                  disabled
+                                                            >
+                                                                  View Detail Button
+                                                            </button>
+                                                      ) : (
+                                                            <Link to={`/articledetils/${_id}`}>
+                                                                  <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
+                                                                        View Detail Button
+                                                                  </button>
+                                                            </Link>
+                                                      )}
+                                                </div>
                                           </div>
-
-                                    </div>
-                                    <div className=' ml-5'>
-                                          <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-
-                                          </p>
-                                    </div>
-                                    <div className='w-full mx-auto mt-5 mb-0'>
-                                          {isPremium && !userHasSubscription ? (
-                                                <button
-                                                      onClick={handleDetailsButtonClick}
-                                                      className="bg-[#E31C25] text-white p-2 w-full rounded-lg cursor-not-allowed opacity-50"
-                                                      disabled
-                                                >
-                                                      View Detail Button
-                                                </button>
-                                          ) : (
-                                                <Link to={`/articledetils/${_id}`}>
-                                                      <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
-                                                            View Detail Button
-                                                      </button>
-                                                </Link>
-                                          )}
                                     </div>
                               </div>
                         </>
                               : <>
-                                    <div className="relative flex max-w-[550px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                                          <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
-                                                <img className='rounded-lg'
-                                                      src={image}
-                                                      alt="ui/ux review check"
-                                                />
-                                          </div>
-                                          <div className="p-6">
-                                                <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-[#E31C25] ">
-                                                      <span className='text-black'>Title:</span>  {title}
-                                                </h4>
+                                    <div className="">
+                                          <div className="max-w-[330px] h-[467px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                                <img className="rounded-t-lg object-cover w-[330px] h-[170px]" src={image} alt="" />
 
-                                                <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                                                      {description}
-                                                </p>
-                                                <h2 className='text-2xl mt-4 text-[#E31C25]'><span className='text-black'>Publisher: {publisher}</span> </h2>
-                                          </div>
-                                          <div className="flex items-center justify-between p-6">
-                                                <div className="flex items-center gap-4">
-                                                      <img alt="" className="w-12 h-12 rounded-full ri ri dark:bg-gray-500 ri ri" src={articalAuthorPhoto} />
-                                                      <h2 className='text-2xl font-bold text-[#E31C25] '>{articleAuthorName}</h2>
-
+                                                <div className="p-5 w-full h-[184px] ">
+                                                      <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                                                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+                                                      <p className="mb-3 text-1xl font-semibold text-gray-800 dark:text-gray-400">publisher: {publisher}</p>
+                                                      <div className="flex items-center justify-between py-2">
+                                                            <div className="flex items-center gap-4">
+                                                                  <img alt="" className="w-10 h-10 rounded-full bg-gray-500" src={articalAuthorPhoto} />
+                                                                  <h2 className="text-base font-bold text-[#E31C25]">{articleAuthorName}</h2>
+                                                            </div>
+                                                      </div>
+                                                      <div className='w-full mx-auto mt-2 mb-0'>
+                                                            {isPremium && !userHasSubscription ? (
+                                                                  <button
+                                                                        onClick={handleDetailsButtonClick}
+                                                                        className="bg-[#E31C25] text-white p-2 w-full rounded-lg cursor-not-allowed opacity-50"
+                                                                        disabled
+                                                                  >
+                                                                        View Detail Button
+                                                                  </button>
+                                                            ) : (
+                                                                  <Link to={`/articledetils/${_id}`}>
+                                                                        <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
+                                                                              View Detail Button
+                                                                        </button>
+                                                                  </Link>
+                                                            )}
+                                                      </div>
                                                 </div>
-
-                                          </div>
-                                          <div className=' ml-5'>
-                                                <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-
-                                                </p>
-                                          </div>
-                                          <div className='w-full mx-auto mt-5 mb-0'>
-                                                {isPremium && !userHasSubscription ? (
-                                                      <button
-                                                            onClick={handleDetailsButtonClick}
-                                                            className="bg-[#E31C25] text-white p-2 w-full rounded-lg cursor-not-allowed opacity-50"
-                                                            disabled
-                                                      >
-                                                            View Detail Button
-                                                      </button>
-                                                ) : (
-                                                      <Link to={`/articledetils/${_id}`}>
-                                                            <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
-                                                                  View Detail Button
-                                                            </button>
-                                                      </Link>
-                                                )}
                                           </div>
                                     </div>
                               </>
