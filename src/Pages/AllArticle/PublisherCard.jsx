@@ -4,16 +4,17 @@ import Swal from 'sweetalert2';
 
 const PublisherCard = ({ data, userHasSubscription,}) => {
       const { title, image, isPremium, publisher, description, articalAuthorPhoto, articleAuthorName, _id } = data || {}
-      const handleDetailsButtonClick = () => {
+      const handleDetailsButtonClick = (id) => {
             if (isPremium && !userHasSubscription) {
                   Swal.fire("You need to subscribe to access details for premium articles!");
             } else {
                   //     baki kj pore korbo 
             }
+            console.log(id);
       };
       return (
             <div className="">
-                  <div className="max-w-[330px] h-[467px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <div className="max-w-[330px] relative h-[467px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                               <img className="rounded-t-lg object-cover w-[330px] h-[170px]" src={image} alt="" />
                         
                         <div className="p-5 w-full h-[184px] ">
@@ -26,19 +27,19 @@ const PublisherCard = ({ data, userHasSubscription,}) => {
                                           <h2 className="text-base font-bold text-[#E31C25]">{articleAuthorName}</h2>
                                     </div>
                               </div>
-                              <div className='w-full mx-auto mt-2 mb-0'>
+                              <div className='w-full mx-auto mt-2 mb-0 absolute bottom-0 left-0'>
                               {isPremium && !userHasSubscription ? (
                                     <button
-                                          onClick={handleDetailsButtonClick}
-                                          className="bg-[#E31C25] text-white p-2 w-full rounded-lg cursor-not-allowed opacity-50"
-                                          disabled
+                                          onClick={()=>handleDetailsButtonClick(_id)}
+                                          className="bg-[#E31C25] text-white p-2 w-full rounded-lg  opacity-50"
+                                          // disabled
                                     >
-                                          View Detail Button
+                                          View Detail 
                                     </button>
                               ) : (
                                     <Link to={`/articledetils/${_id}`}>
                                           <button className="bg-[#E31C25] text-white p-2 w-full rounded-lg hover:bg-black mb-0">
-                                                View Detail Button
+                                                View Detail 
                                           </button>
                                     </Link>
                               )}
