@@ -14,7 +14,7 @@ import TesrtContact from '../../Shared/TesrtContact';
 const Home = () => {
 
       return (
-            <div className='px-6'>
+            <div className='px-6 mt-2'>
                   <Helmet>
                         <title>DailyPulse || Home</title>
                   </Helmet>
@@ -22,7 +22,7 @@ const Home = () => {
                   <div>
 
                   </div>
-                  <div className='max-w-6xl mx-auto  mt-10'>
+                  <div className='max-w-6xl mx-auto  mt-6'>
                         <SectionTitle title="Trending News"></SectionTitle>
                         <Slaider></Slaider>
                   </div>
