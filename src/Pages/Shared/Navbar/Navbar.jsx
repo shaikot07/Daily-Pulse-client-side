@@ -20,7 +20,8 @@ const Navbar = () => {
                         <li> <NavLink to="/addarticles" className="hover:bg-black hover:text-white" >Add Articles</NavLink></li>
                         <li> <NavLink to="/subscription" className="hover:bg-black hover:text-white" >Subscription</NavLink></li>
                         <li> <NavLink to="/dashboard" className="hover:bg-black hover:text-white" >Dashboard</NavLink></li>
-                        <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+                        {/* <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button> */}
+                        <li onClick={handleLogOut} className="mt-[6px] ml-[5px]">Log Out</li>
                   </> : <>
 
                         <li> <NavLink to="/login" className="hover:bg-black hover:text-white" >Log IN</NavLink></li>
@@ -43,7 +44,7 @@ const Navbar = () => {
                         <h3 className='text-4xl'>DailyPulse</h3>
                   </div>
                   <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-1 font-semibold">
                               {navOption}
                         </ul>
                   </div>
