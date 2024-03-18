@@ -11,9 +11,7 @@ const Navbar = () => {
 
       const navOption = <>
             <li> <NavLink to="/" className="hover:bg-slate-950 hover:text-white">Home</NavLink></li>
-            
             <li> <NavLink to="/allarticles" className="hover:bg-black hover:text-white" >All Articles</NavLink></li>
-            
             
             {
                   user ? <>
