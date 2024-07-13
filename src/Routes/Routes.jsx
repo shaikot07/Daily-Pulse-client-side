@@ -22,6 +22,7 @@ import AdminAllArticlePage from "../Pages/Dashboard/Admin/AdminAllArticlePage/Ad
 import AddPublisher from "../Pages/Dashboard/Admin/AddPublisher/Addpublisher";
 import ErrorPage from "../Component/ErrorPage";
 import AdminPrivateRoute from "./AdminPrivateRoute";
+import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile/AdminProfile";
 
 
 
@@ -110,6 +111,10 @@ export const router = createBrowserRouter([
                   {
                         path:'addPublisher',
                         element:<AdminPrivateRoute><AddPublisher></AddPublisher></AdminPrivateRoute>
+                  },
+                  {
+                        path:'adminProfile',
+                        element:<AdminPrivateRoute><AdminProfile></AdminProfile> </AdminPrivateRoute>
                   },
                   
             ]

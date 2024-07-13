@@ -21,7 +21,7 @@ const AdminHome = () => {
       ]
 
       const options = {
-            title: 'Article Distribution by Publication',
+            title: 'Article Distribution by Publication..',
       };
 
       return (

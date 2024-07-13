@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaAddressBook, FaBook, FaBookReader, FaHome, FaUsers } from 'react-icons/fa';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { MdPublish } from "react-icons/md";
 import useAdmin from '../hooks/useAdmin';
 const Dashboard = () => {
       // const isAdmin = true;
-      const [isAdmin]=useAdmin()
+      const [isAdmin] = useAdmin()
+      const navigate = useNavigate();
+
+      useEffect(() => {
+                  navigate('/dashboard/adminHome'); // Redirect to Admin Home on first login
+            
+      }, []);
       return (
             <div className='flex'>
                   <div className='w-64 min-h-screen bg-[#B80000]'>
@@ -31,6 +37,11 @@ const Dashboard = () => {
                                           <li> <NavLink to="/dashboard/addPublisher">
                                                 <MdPublish />
                                                 Add publisher</NavLink>
+                                          </li>
+                                          <li>
+                                                <NavLink to="/dashboard/adminProfile">
+                                                      <FaAddressBook />
+                                                      Admin Profile</NavLink>
                                           </li>
                                           <li> <NavLink to="/">
                                                 <FaHome></FaHome>
