@@ -39,7 +39,7 @@ const AdminProfile = () => {
                 </div>
                 <div className="p-4 text-center">
                     <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                      Admin:  {user?.displayName}
+                      Admin Name:  {user?.displayName}
                     </h4>
                     <h2>Update Your Profile</h2>
                 </div>
