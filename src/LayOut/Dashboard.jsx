@@ -8,9 +8,16 @@ const Dashboard = () => {
       const [isAdmin] = useAdmin()
       const navigate = useNavigate();
 
+      // useEffect(() => {
+      //       if (isAdmin) {
+      //           navigate('/dashboard/adminHome'); // Redirect to Admin Home on first login
+      //       }
+      //   }, [isAdmin, navigate]);
       useEffect(() => {
             if (isAdmin) {
-                navigate('/dashboard/adminHome'); // Redirect to Admin Home on first login
+                navigate('/dashboard/adminHome'); // Redirect to Admin Home if user is an admin
+            } else {
+                navigate('/dashboard/userHome'); // Redirect to User Home if user is not an admin
             }
         }, [isAdmin, navigate]);
 
