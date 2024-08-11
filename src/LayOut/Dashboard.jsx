@@ -9,9 +9,11 @@ const Dashboard = () => {
       const navigate = useNavigate();
 
       useEffect(() => {
-                  navigate('/dashboard/adminHome'); // Redirect to Admin Home on first login
-            
-      }, []);
+            if (isAdmin) {
+                navigate('/dashboard/adminHome'); // Redirect to Admin Home on first login
+            }
+        }, [isAdmin, navigate]);
+
       return (
             <div className='flex'>
                   <div className='w-64 min-h-screen bg-[#B80000]'>
